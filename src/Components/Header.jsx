@@ -8,7 +8,10 @@ export default function Header() {
         <img src="../../public/images/logo.svg"></img>
       </Logo>
       <NavMenu>
-        menu
+        <a href="/home">
+            <img src="../../public/images/home-icon.svg" alt="" />
+        <span>Home</span>
+        </a>
       </NavMenu>
     </Nav>
   );
@@ -50,6 +53,33 @@ const NavMenu = styled.div`
     position: relative;
     margin-right: auto;
     margin-left: 25px;
+    a{
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        
+        img{
+            height: 20px;
+            min-width: 20px;
+            width: 20px;
+            
+        }
+        span{
+            color: rgb(249, 249 249);
+            font-size: 13px;
+            letter-spacing: 1.42px;
+            line-height:100.08;
+            padding: 2px 0px;
+            white-space: nowrap;
+            position: relative;
+        }
+        &::before{
+            background-color: red;
+            content: '';
+            border-radius:0px 0px 4px 4px;
+            bottom: -6px;
+        }
+    }
     @media (max-width:768px) {
         display: none;
     }
