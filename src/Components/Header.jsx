@@ -78,6 +78,14 @@ const NavMenu = styled.div`
             content: '';
             border-radius:0px 0px 4px 4px;
             bottom: -6px;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            transform-origin:left center ;
+            transform: scaleX(0);
+            transition:  all 250ms cubic-bezier(0.25,0.64,0.45,0.94) 0s;
+            visibility: hidden;
+            width: auto;
         }
     }
     @media (max-width:768px) {
